@@ -17,7 +17,7 @@
 	},
 	"private": true,
 	"scripts": {
-		"deploy": "wrangler deploy",
+		"deploy": "wrangler deploy --keep-vars",
 		"dev": "wrangler dev",
 		"dev:remote": "wrangler dev --remote",
 		"test": "vitest run",
