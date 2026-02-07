@@ -5,7 +5,7 @@
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
-		"start": "wrangler dev",
+		"dev:remote": "wrangler dev --remote",
 		"test": "vitest run",
 		"cf-typegen": "wrangler types",
 		"lint": "eslint . --max-warnings 0",
