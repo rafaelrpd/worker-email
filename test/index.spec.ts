@@ -2,23 +2,36 @@ import { env, createExecutionContext, waitOnExecutionContext, SELF } from 'cloud
 import { describe, it, expect } from 'vitest';
 import worker from '../src/index';
 
-// For now, you'll need to do something like this to get a correctly-typed
-// `Request` to pass to `worker.fetch()`.
-const IncomingRequest = Request<unknown, IncomingRequestCfProperties>;
-
-describe('Hello World worker', () => {
-	it('responds with Hello World! (unit style)', async () => {
-		const request = new IncomingRequest('http://example.com');
-		// Create an empty context to pass to `worker.fetch()`.
+describe('worker-email', () => {
+	it('GET /api/health (unit style)', async () => {
+		const req = new Request('http://example.com/api/health');
 		const ctx = createExecutionContext();
-		const response = await worker.fetch(request, env, ctx);
-		// Wait for all `Promise`s passed to `ctx.waitUntil()` to settle before running test assertions
+
+		const res = await worker.fetch(req, env, ctx);
 		await waitOnExecutionContext(ctx);
-		expect(await response.text()).toMatchInlineSnapshot(`"Hello World!"`);
+
+		expect(res.status).toBe(200);
+		expect(res.headers.get('content-type') ?? '').toContain('application/json');
+
+		const body = await res.json<unknown>();
+		expect(body).toEqual({ ok: true, service: 'worker-email' });
 	});
 
-	it('responds with Hello World! (integration style)', async () => {
-		const response = await SELF.fetch('https://example.com');
-		expect(await response.text()).toMatchInlineSnapshot(`"Hello World!"`);
+	it('GET /nao-existe retorna 404 (unit style)', async () => {
+		const req = new Request('http://example.com/nao-existe');
+		const ctx = createExecutionContext();
+
+		const res = await worker.fetch(req, env, ctx);
+		await waitOnExecutionContext(ctx);
+
+		expect(res.status).toBe(404);
+	});
+
+	it('GET /api/health (integration style)', async () => {
+		const res = await SELF.fetch('https://example.com/api/health');
+		expect(res.status).toBe(200);
+
+		const body = await res.json<unknown>();
+		expect(body).toEqual({ ok: true, service: 'worker-email' });
 	});
 });
