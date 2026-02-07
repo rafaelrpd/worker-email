@@ -4,7 +4,6 @@ Um serverless backend worker construído com Cloudflare Workers para lidar com f
 
 ## 🚀 Features
 
-- **Contact Form**: Recebimento de mensagens via API com validação robusta usando **Zod**.
 - **Integração com Cloudflare**:
   - **D1 Database**: Armazenamento de mensagens e logs.
   - **KV Namespace**: (Opcional) Cache e configurações rápidas.
