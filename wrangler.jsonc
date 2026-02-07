@@ -9,6 +9,21 @@
 	"compatibility_date": "2026-02-05",
 	"observability": {
 		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "rafaeldias_email",
+			"database_id": "9a8a249c-7655-48bf-935e-7b9e14848c2e"
+		}
+	],
+	"vars": {
+		"INBOX_TO": "br.rafaeldias@gmail.com",
+		"CONTACT_TO": "contact@rafaeldias.net",
+		"REPLY_PREFIX": "reply+",
+		"TOKEN_INACTIVITY_DAYS": "180",
+		"RATE_LIMIT_MINUTES": "5",
+		"ALLOWED_REPLY_FROM": "br.rafaeldias@gmail.com"
 	}
 	/**
 	"compatibility_flags": [
