@@ -63,7 +63,7 @@ O projeto utiliza o D1 da Cloudflare.
 Para criar uma nova migration (alteração no esquema do banco):
 
 ```bash
-bun x wrangler d1 migrations create rafaeldias_email "descricao_da_mudanca"
+bun wrangler d1 migrations create rafaeldias_email "descricao_da_mudanca"
 ```
 
 Isso criará um arquivo SQL na pasta `migrations`.
@@ -71,13 +71,13 @@ Isso criará um arquivo SQL na pasta `migrations`.
 Para aplicar as migrations localmente:
 
 ```bash
-bun x wrangler d1 migrations apply rafaeldias_email --local
+bun wrangler d1 migrations apply rafaeldias_email --local
 ```
 
 Para aplicar em produção:
 
 ```bash
-bun x wrangler d1 migrations apply rafaeldias_email --remote
+bun wrangler d1 migrations apply rafaeldias_email --remote
 ```
 
 ## 💻 Desenvolvimento
