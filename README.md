@@ -12,7 +12,7 @@ Um serverless backend worker construído com Cloudflare Workers para lidar com f
   - Cloudflare Turnstile para proteção contra bots.
   - Rate Limiting configurável.
 - **Ambiente de Desenvolvimento**:
-  - **Bun**: Runtime rápido e compatível.
+  - **Bun**: Bun: gerenciador de dependências e runner local (scripts).
   - **TypeScript**: Tipagem estática para maior segurança.
   - **ESLint + Prettier**: Padronização de código.
 
