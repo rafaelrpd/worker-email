@@ -4,9 +4,6 @@ export default {
 
 		// CORS preflight
 		if (request.method === 'OPTIONS') {
-			console.log('Origin:', request.headers.get('Origin'));
-			console.log('ALLOWED_ORIGINS:', env.ALLOWED_ORIGINS);
-
 			return cors(new Response(null, { status: 204 }), request, env);
 		}
 
