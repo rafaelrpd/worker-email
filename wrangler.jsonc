@@ -17,18 +17,7 @@
 			"database_name": "rafaeldias_email",
 			"database_id": "9a8a249c-7655-48bf-935e-7b9e14848c2e"
 		}
-	],
-	"vars": {
-		// Plaintext (Dashboard)
-		"ALLOWED_ORIGINS": "__VAR_ALLOWED_ORIGINS__",
-		"RATE_LIMIT_MINUTES": "__VAR_RATE_LIMIT_MINUTES__",
-		"REPLY_PREFIX": "__VAR_REPLY_PREFIX__",
-		"TOKEN_INACTIVITY_DAYS": "__VAR_TOKEN_INACTIVITY_DAYS__",
-		// Secrets (Dashboard)
-		"ALLOWED_REPLY_FROM": "__SECRET_ALLOWED_REPLY_FROM__",
-		"CONTACT_TO": "__SECRET_CONTACT_TO__",
-		"INBOX_TO": "__SECRET_INBOX_TO__"
-	}
+	]
 	/**
 	"compatibility_flags": [
 		"nodejs_compat"
