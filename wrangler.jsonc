@@ -8,6 +8,24 @@
 	"main": "src/index.ts",
 	"compatibility_date": "2026-02-05",
 	"keep_vars": true,
+	"routes": [
+		{
+			"pattern": "rafaeldias.net/api/contact",
+			"zone_name": "rafaeldias.net"
+		},
+		{
+			"pattern": "rafaeldias.net/api/inbound/resend",
+			"zone_name": "rafaeldias.net"
+		},
+		{
+			"pattern": "www.rafaeldias.net/api/contact",
+			"zone_name": "rafaeldias.net"
+		},
+		{
+			"pattern": "www.rafaeldias.net/api/inbound/resend",
+			"zone_name": "rafaeldias.net"
+		}
+	],
 	"observability": {
 		"enabled": true
 	},

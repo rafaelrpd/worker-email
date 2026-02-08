@@ -1,7 +1,11 @@
+#.dev.vars.example
 ALLOWED_ORIGINS=https://www.google.com,https://google.com,http://localhost:5173,http://localhost:8787
 REPLY_PREFIX=reply+
 TOKEN_INACTIVITY_DAYS=180
 RATE_LIMIT_MINUTES=5
+
+MIN_ELAPSED_MS="900"
+MAX_ELAPSED_MS="300000"
 
 INBOX_TO=google@gmail.com
 ALLOWED_REPLY_FROM=reply@gmail.com
@@ -10,4 +14,4 @@ CONTACT_TO=contact@gmail.com
 # secrets reais (se você quiser testar envio localmente)
 RESEND_API_KEY=...
 RESEND_WEBHOOK_SECRET=...
-TURNSTILE_SECRET_KEY=...
+TURNSTILE_SECRET_KEY=0x219Ajdlsd82sn2MS12mfs98274_111111
